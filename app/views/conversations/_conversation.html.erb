@@ -1,0 +1,13 @@
+<div class="container row">
+
+	<strong><%= conversation.originator.fullname %></strong> <br>
+	<small><b>Subject:</b><%= conversation.subject %></small><br>
+	<small><b>Date: </b><%= conversation.messages.last.created_at.strftime("%A, %b, %d, %Y at %I:%M%p") %></small>
+	<br>
+	<div class="field">
+	<%= truncate conversation.messages.last.body, length: 145 %>
+	</div>
+	<br>
+	<%= link_to "View More", conversation_path(conversation) %>
+</div>
+<br>

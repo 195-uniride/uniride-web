@@ -1,0 +1,100 @@
+<div class="profile-wrapper">
+<div class="container">	
+  	<div class="row">
+		<div class="twelve columns">
+			<div class="photo">
+				<%= image_tag(@user.avatar.url, :height=>"220px")%>	
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="twelve columns">	
+			<div class="name">
+				<%= first_letter_uppercase @user.firstName%> <%= first_letter_uppercase @user.lastName%>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">	
+		<div class="container" id="user-info">	
+			<div class="row">
+				<div class="four columns selected" id="profile">
+					Profile
+				</div>
+				<div class="four columns" id="posts">
+					Posts
+				</div>
+				<div class="four columns" id="trips">
+					Trips
+				</div>
+			</div>
+			<div class="row">
+				<div id="show-info">
+					<div class="row">
+					  		<div>
+					  			First Name:  
+					  			<%= @user.firstName()%>
+					  		</div>
+					  		<div>
+					  			Last Name:  
+					  			<%= @user.lastName()%>
+					  		</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div id="post-info">
+					<div class="row">
+					  		These are <%=first_letter_uppercase @user.firstName%> <%=first_letter_uppercase @user.lastName%>'s posts:-
+					  		<div class ="row">
+									<%Post.where(:user_id => @user.id()).each do |p| %>
+									<div> ------------------</div>
+									Title:- <%=	p.title %> </br>							
+									Time:- <%=	p.created_at %> </br>
+									<div> <%= link_to "View Post", post_path(p) %> </div>
+									<div> ------------------</div>
+									<% end %>
+							</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div id="trips-info">
+					These are <%=first_letter_uppercase @user.firstName%> <%=first_letter_uppercase @user.lastName%>'s trips:-
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				$("#profile").click(function() {
+					$("#posts").removeClass("selected");
+					$("#trips").removeClass("selected");
+					$("#post-info").hide();
+					$("#trips-info").hide();
+					$("#show-info").show();
+					$(this).addClass("selected");
+				});
+				$("#posts").click(function() {
+					$("#profile").removeClass("selected");
+					$("#trips").removeClass("selected");
+					$("#trips-info").hide();
+					$("#show-info").hide();
+					$("#post-info").show();
+					$(this).addClass("selected");
+				});
+
+				$("#trips").click(function() {
+					$("#posts").removeClass("selected");
+					$("#profile").removeClass("selected");
+					$("#post-info").hide();
+					$("#show-info").hide();
+					$("#trips-info").show();
+					$(this).addClass("selected");
+				});
+			</script>
+		</div>
+	</div>
+</div>
+</div>

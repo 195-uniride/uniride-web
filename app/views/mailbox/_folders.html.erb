@@ -1,0 +1,33 @@
+
+			<section id="two" class="wrapper style2 special">
+				<div class="inner narrow">
+					<header>
+						<h2>MESSAGING</h2>
+					</header>
+					<form class="grid-form" method="post" action="#">
+						<div class="form-control">
+							<span class = "<%= active_page(:inbox) %>">
+							<%= link_to mailbox_inbox_path do %>
+							<label for="name">Inbox (<%= unread_messages_count%>)</label>
+							<% end %>
+							</span>
+						</div>
+						<div class="form-control">
+							<span class="<%= active_page(:sent) %>">
+							<%= link_to mailbox_sent_path do %>
+							<label for="email">Sent </label>
+							<% end %>
+						</div>
+						<div class="form-control">
+							<span class="<%= active_page(:trash) %>">
+							<%= link_to mailbox_trash_path do %>
+							<label for="message">Trash </label>
+							<% end %>
+							</span>
+						</div>
+						<ul class="actions">
+							<li><%= link_to "Compose", new_conversation_path, :class=> "button" %></li>
+						</ul>
+					</form>
+				</div>
+			</section>
