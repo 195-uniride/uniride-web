@@ -7,9 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">
   </head>
 
   <body class="special">
@@ -37,21 +35,25 @@
 
   <div class="create-margin"></div>
   <%end%>
+  
   <% unless user_signed_in?%> 
-  	<div class="alert-notice"><p class="notice"><%= notice %></p></div>
+    <% if notice %>
+  	  <div class="alert-notice"><p class="notice"><%= notice %></p></div>
+    <% end %>
   <% end %>
-  	<div class="alert-error"><p class="alert">
-      <% if alert %>
-        <button class="close"> × </button>
-        <%= alert %>
-      <script>      
-        $(".close").click(function(){
-          $(".alert-error").hide();
-        });
-      </script>
-      <% end %>
-    </p></div>
 
-    <%= yield %>
+  <% if alert %>
+    <div class="alert-error"><p class="alert">
+    <button class="close"> × </button>
+    <%= alert %>
+    <script>      
+      $(".close").click(function(){
+        $(".alert-error").hide();
+      });
+    </script>
+    </p></div>
+  <% end %>
+
+  <%= yield %>
   </body>
 </html>
