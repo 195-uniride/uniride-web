@@ -2,23 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.profile-wrapper{
-	background-color: #f7f7f7;
+.profile-info{
+	background-color: var(--black);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	display: block;
+	padding: 25px 100px;
+	padding-top: 10%;;
+	position: static;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	overflow-y: visible;
+	box-sizing: border-box;
+	color: var(--white);
 }
 
-.profile-wrapper .row{
-	margin-bottom: 3vh;
-	text-align: center;
-}
-
-.profile-wrapper .photo{
+.profile-info .profile-photo{
 	display: block;
 	margin: auto;
-	height: 220px;
-	width: 220px;
-	border-radius: 200px;
-	border: solid 1px #f7f7f7;
-	overflow: hidden;
+	margin-bottom: 20px;
+	height: 10vw;
+	width: 10vw;
+	border-radius: 150px;
+	border: solid 2px var(--white);
+}
+
+.profile-info .profile-name{
+	display: block;
+	margin: auto;
+	margin-bottom: 60px;
+	width: 100%;
+	text-align: center;
+	font-size: 2vw;
+	letter-spacing: 5px;
+  	font-family: 'Josefin Sans', sans-serif;
+}
+
+.profile-info .container{
+	margin: auto;
+	text-align: center;
+	font-size: 15px;
+	letter-spacing: 2px;
+	margin-bottom: 40px;
+}
+
+.profile-info .rating{
+	display: block;
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	height: 40px;
+	width: 300px;
+	color: var(--blue);
+	border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+	font-size: 30px;
+}
+
+.rating .fa{
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .profile-wrapper .name{

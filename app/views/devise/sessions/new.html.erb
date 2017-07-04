@@ -1,46 +1,39 @@
-<body class = "devise-wrapper">
 
-<div class="container"> 
-  <div class="row">
-    <div class="twelve columns">
-      <span class = "uniride-heading">UniRide</span>
-    </div>
-  </div>
-</div>
+<span class = "right-half-login">
+  <div id="login-quote">"Irrelavant quote goes here."</div>
+</span>
 
-<div class = "container devise-form">
+<span class="left-half-login">
+<div class = "vertical-align-wrap">
+  <div class = "uniride-title">UniRide</div>
+  <div class = "container">
+    <h2 class="login-title">Log In</h2>
 
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="row">
-    <div class="twelve columns">
-      <%= f.label :email, :style=>"text-align: left" %>
-      <%= f.email_field :email, autofocus: true, :style=>"color:#167fa0" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="twelve columns">
-      <%= f.label :password, :style=>"text-align: left" %>
-      <%= f.password_field :password, autocomplete: "off", :style=>"color:#167fa0" %>
-    </div>
-  </div>
-
-    <% if devise_mapping.rememberable? -%>
-    <div class="row">
-      <div class="twelve columns">
-        <%= f.check_box :remember_me, :style=>"text-align: left" %>
-        <span class="label-body">Remember Me</span>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="row">
+        <div class="three columns"><%= f.label "Email", :style=>"text-align: right" %></div>
+        <div class="eight columns"><%= f.email_field :email, autofocus: true, :class=>"u-full-width" %></div>
       </div>
-    </div>
-    <% end -%>
-    <%= f.submit "Log in", :class=>"button-primary" %>
-<% end %>
 
-<span class="twelve columns line"></span>
-<%= link_to "Sign Up", sign_up_url, :class=>"button"%>
-<%= link_to "Forgot your password?", new_password_path('user'), :class=>"button" %>
+      <div class="row">
+          <div class="three columns"><%= f.label "Password", :style=>"text-align: right" %></div>
+          <div class="eight columns"><%= f.password_field :password, autocomplete: "off", :class=>"u-full-width" %></div>
+      </div>
+
+        <% if devise_mapping.rememberable? -%>
+        <div class="row">
+          <div class="twelve columns" style="text-align: center">
+            <%= f.check_box :remember_me, :style=>"text-align: left" %>
+            <span class="label-body">Remember Me</span>
+          </div>
+        </div>
+        <% end -%>
+        <center><%= f.submit "Log in", :class=>"button-primary" %></center>
+    <% end %>
+
+    <span class="twelve columns line"></span>
+    <%= link_to "Forgot your password?", new_password_path('user'), :class=>"button forgot" %>
+    <%= link_to "Sign Up", sign_up_url, :class=>"button signup"%>
+  </div>
 </div>
-
-</body>
+</span>

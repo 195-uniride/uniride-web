@@ -24,7 +24,9 @@
 }
 
 .home-half-bg .uniride-title{
-  position: relative;
+	position: relative;
+	top: 50%;
+	margin: auto;
 }
 
 .banner{
@@ -54,4 +56,100 @@
 	font-size: 11px;
 	color: rgba(0, 0, 0, 0.5);
 	background-color: var(--blue);
+}
+
+/* Authentication and Registration */
+
+.right-half-login{
+	background: url("/BG.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	position: absolute;
+	right: 0px;
+	height: 100%;
+}
+
+.right-half-login.left{
+	position: fixed;
+	left: 0px;
+	height: 100%;
+}
+
+.right-half-login #login-quote{
+	position: relative;
+	text-align: center;
+	top: 50%;
+	color: var(--white);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 35px;
+	font-style: italic;
+}
+
+.left-half-login{
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	height: 100%;
+}
+
+.left-half-login .uniride-title{
+	margin-bottom: 50px;
+}
+
+.left-half-login.right{
+	left: 50%;
+}
+
+.left-half-login .vertical-align-wrap{
+	position: relative;
+	top: 5%;
+}
+
+.left-half-login .container{
+	width: 60%;
+	padding: 0;
+}
+
+.left-half-login label{
+	line-height: 40px;
+}
+
+.login-title{
+	margin: 30px;
+	text-align: center;
+	color: var(--black);
+	opacity: 0.9;
+	letter-spacing: 2px;
+	font-size: 30px;
+}
+
+.left-half-login .row{
+	margin-bottom: 15px;
+}
+
+.left-half-login .button-primary{
+	margin-bottom: 0 !important;
+}
+
+.left-half-login .button{
+	display: block;
+	font-size: 9px;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 25px;
+	letter-spacing: 1px;
+}
+
+.left-half-login .button.forgot{
+	border: none;
+	font-size: 13px;
+	display: block;
+	padding: 0 !important;
+	text-transform: none;
 }

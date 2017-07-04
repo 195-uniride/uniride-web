@@ -12,26 +12,26 @@
 
   <body class="special">
   <%if user_signed_in? %>
+  <span id="nav-wrapper">
   <div class="container-nav">
       <div class="row">
         <div class="four columns">
           <%=link_to 'UniRide', root_url, :class=>"uniride-nav u-pull-left" %></div>
         <div class="two columns">
-          <span class="nav-element">
-            <%= link_to'Feed', posts_url, :class => "nav-element" %>
-          </span>
+            <%= link_to '<i class="fa fa-newspaper-o" aria-hidden="true"></i>'.html_safe, posts_url, :class => "nav-element" %>
         </div>
         <div class="two columns">
-          <%= link_to'Profile', profile_url, :class => "nav-element" %>
+          <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, profile_url, :class => "nav-element" %>
         </div>
         <div class="two columns">
-          <%= link_to 'Inbox', mailbox_inbox_path, :class=>"nav-element" %>
+          <%= link_to '<i class="fa fa-comment-o" aria-hidden="true"></i>'.html_safe, mailbox_inbox_path, :class=>"nav-element" %>
         </div>
         <div class="two columns">
-          <%= link_to'Search', search_path, :class => "nav-element" %>
+          <%= link_to '<i class="fa fa-search" aria-hidden="true"></i>'.html_safe, search_path, :class => "nav-element" %>
         </div>
       </div>
   </div>
+  </span>
 
   <div class="create-margin"></div>
   <%end%>

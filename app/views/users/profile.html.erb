@@ -1,21 +1,29 @@
+<body>
+<span class="profile-info">
+	<div class="profile-photo"></div>
+	<div class="profile-name"><%= first_letter_uppercase current_user.firstName%> <%= current_user.lastName%></div>
 
-<section id="" class="wrapper style2 special">
-				<div class="inner narrow">
-					<header>
-						<h2><%= first_letter_uppercase current_user.firstName%> <%= current_user.lastName%></h2>
-					</header>
-					<form class="grid-form" method="post" action="#">
-						<ul class="actions">
-							<li>
-							<%= link_to "New Post", new_post_url, :class=>"button special"%>
-							</li>
-							<li>
-							<%= link_to "Edit", edit_user_registration_path, :class=>"button special" %>
-							</li>
-						</ul>
-					</form>
-				</div>
-			</section>
+	<div class="container">
+		<div class="row">
+			<div class="one-half column">
+				<i class="fa fa-car" aria-hidden="true"></i> Trips<br>0
+			</div>
+			<div class="one-half column">
+				<i class="fa fa-file-text-o" aria-hidden="true"></i> Posts<br><%= current_user.posts.count %>
+			</div>
+		</div>
+	</div>
+
+	<div class="rating">
+		<i class="fa fa-star-o" aria-hidden="true"></i> 
+		<i class="fa fa-star-o" aria-hidden="true"></i> 
+		<i class="fa fa-star-o" aria-hidden="true"></i> 
+		<i class="fa fa-star-o" aria-hidden="true"></i> 
+		<i class="fa fa-star-o" aria-hidden="true"></i> 
+	</div>
+</span>
+<%= link_to "New Post", new_post_url, :class=>"button special"%>
+<%= link_to "Edit", edit_user_registration_path, :class=>"button special" %>
 
 <div class="container">	
 		<div class="container" id="user-info">	
@@ -34,15 +42,10 @@
 			<div class="row">
 				<div id="show-info">
 					<div class="row">
-					  		<div>
-					  			First Name:  
-					  			<%= @current_user.firstName%>
-
-					  		</div><br>
-					  		<div>
-					  			Last Name:  
-					  			<%= @current_user.lastName()%>
-					  		</div>
+						First Name:  
+						<%= @current_user.firstName%><br>
+						Last Name:  
+						<%= @current_user.lastName()%>
 					</div>
 				</div>
 			</div>
@@ -98,3 +101,4 @@
 		</div>
 </div>
 </div>
+</body>
