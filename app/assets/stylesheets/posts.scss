@@ -1,3 +1,48 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-post-title{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--black);
+    opacity: 0.9;
+}
+
+.required-field{
+    color: #E57373;
+}
+
+.add-detour{
+    display: block;
+    margin: auto;
+    height: 75px;
+    width: 50px;
+    text-align: center;
+    font-size: 50px;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.nested-fields .one{
+    display: block;
+    margin: auto;
+    padding: 15px 2px;
+    height: 65px;
+    width: 100%;
+    text-align: center;
+}
+
+.remove-detour{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: #E57373 !important;
+    transition: all 0.3s;
+}
+
+.remove-detour:hover{
+    color: #E53935 !important;
+}
