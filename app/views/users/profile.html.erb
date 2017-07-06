@@ -1,7 +1,7 @@
 <body>
 <span class="profile-info">
 	<div class="profile-photo"></div>
-	<div class="profile-name"><%= first_letter_uppercase current_user.firstName%> <%= current_user.lastName%></div>
+	<div class="profile-name"><%= first_letter_uppercase current_user.firstName%> <%= first_letter_uppercase current_user.lastName%></div>
 
 	<div class="container">
 		<div class="row">
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 
-	<span  class="divider"></span>
+	<span  class="divider profile-page"></span>
 	
 	<span id="content">
 		<div class="row">

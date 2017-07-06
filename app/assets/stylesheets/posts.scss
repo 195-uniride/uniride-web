@@ -46,3 +46,169 @@
 .remove-detour:hover{
     color: #E53935 !important;
 }
+
+/****FEED****/
+
+.feed-create-post{
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    padding: 70px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    background-color: var(--black);
+}
+
+.feed-create-post-icon{
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    font-size: 60px;
+    color: var(--black);
+    background-color: var(--blue);
+    overflow: hidden;
+}
+
+.feed-create-post-icon:hover{
+    color: var(--black);
+}
+
+.feed-create-post-title{
+    font-size: 15px;
+    color: var(--white);
+    letter-spacing: 1px;
+
+    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 70ms ease-out;
+}
+
+.feed-create-post-title:hover{
+    color: var(--white);
+}
+
+.feed-link-tag:hover .feed-create-post-title{
+    opacity: 0.9;
+    transform: scaleY(1);
+}
+
+.trip-card{
+    display: block;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 1px;
+    background-color: #ECECEC;
+    color: var(--black);
+}
+
+.trip-card:hover{
+    color: var(--black);
+}
+
+.trip-uploader-photo{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: var(--white);
+    z-index: 2;    
+}
+
+.trip-card .row.name{
+    height: 50px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.row.name .five{
+    height: 40px;
+    line-height: 55px;
+    font-size: 18px;
+}
+
+.row.name .six{
+    text-align: right;
+    font-size: 12px;
+    line-height: 50px;
+    padding: 0;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.trip-options{
+    display: block;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100% !important;
+    height: 40px;
+    text-align: right;
+    font-size: 25px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.trip-options .destroy{
+    color: #E57373 !important;
+}
+
+.trip-options .destroy:hover{
+    color: #E53935 !important;
+}
+
+.row.path{
+    margin: auto;
+    padding: 5px;
+}
+
+.path .six{
+    padding: 0;
+}
+
+.trip-address{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
+    word-wrap: break-word;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.circle{
+    display: inline-block;
+    border: solid 1px var(--blue);
+    background-color: var(--blue);
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.circle.left{
+    float: left;
+}
+
+.circle.right{
+    float: right;
+}
+
+.line{
+    display: block;
+    position: relative;
+    top: 17px;
+    height: 8px;
+    background-color: var(--blue);
+    width: 100%;
+    opacity: 0.8;
+}
