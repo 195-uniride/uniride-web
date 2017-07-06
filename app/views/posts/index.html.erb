@@ -17,26 +17,40 @@
         </div>
       <%end%>
       <%= link_to post, :action => 'go', :class=>"trip-card" do %>
-      <div class="row name">
-        <div class="one column"><span class="trip-uploader-photo"></span></div>
-        <div class="five columns"><%= first_letter_uppercase post.user.firstName %> <%= first_letter_uppercase post.user.lastName %></div> 
-        <div class="six columns"><%= time_ago_in_words(post.created_at) %> ago</div>
-      </div>
-      
-      <div class = "row path">
-        <div class="three columns"><span class="trip-address source"><%=post.addresses.first.street%>, <%=post.addresses.first.city%></span></div>
-        <div class="six columns path">
-          <div class="circle left"></div><div class="circle right"></div><div class="line"></div>
+        <div class="row name">
+          <div class="one column"><span class="trip-uploader-photo"></span></div>
+          <div class="five columns"><%= first_letter_uppercase post.user.firstName %> <%= first_letter_uppercase post.user.lastName %></div> 
+          <div class="six columns"><%= time_ago_in_words(post.created_at) %> ago</div>
         </div>
-        <div class="three columns"><span class="trip-address destination"><%=post.addresses.second.street%>, <%=post.addresses.second.city%></span></div>
-      </div>
-    <% end %>
-    
-        <%= post.title %>
-        <%= post.description %>
-        <%= post.date %>
-        <%= post.user.firstName %>
-        <%= post.addresses.count %>  
+        
+        <% unless post.addresses.count > 2 %>
+          <div class = "row path">
+            <div class="three columns"><span class="trip-address source"><%=post.addresses.first.street%>, <%=post.addresses.first.city%></span></div>
+            <div class="six columns">
+              <div class="circle left"></div>
+              <div class="circle right"></div>
+              <div class="line"></div>
+            </div>
+            <div class="three columns"><span class="trip-address destination"><%=post.addresses.second.street%>, <%=post.addresses.second.city%></span></div>
+          </div>
+        <%else%>
+          <div class = "row path">
+            <div class="three columns"><span class="trip-address source"><%=post.addresses.first.street%>, <%=post.addresses.first.city%></span></div>
+            <div class="two columns">
+              <div class="circle left"></div>
+              <div class="line"></div>
+            </div>
+            <div class="two columns middle">
+              <%= pluralize(post.addresses.count-2, 'Detour') %>
+            </div>
+            <div class="two columns">
+              <div class="circle right"></div>
+              <div class="line"></div>
+            </div>
+            <div class="three columns"><span class="trip-address destination"><%=post.addresses.second.street%>, <%=post.addresses.second.city%></span></div>
+          </div>
+        <% end %>
+      <% end %> 
     <% end %>
 </div>
 
