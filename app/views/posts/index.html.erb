@@ -45,11 +45,13 @@
             </div>
             <div class="two columns">
               <div class="circle right"></div>
-              <div class="line"></div>
+              <div class="line right"></div>
             </div>
             <div class="three columns"><span class="trip-address destination"><%=post.addresses.second.street%>, <%=post.addresses.second.city%></span></div>
           </div>
         <% end %>
+
+        <div class="row date"><%= post.date.to_formatted_s(:long) %>.</div>
       <% end %> 
     <% end %>
 </div>

@@ -54,9 +54,9 @@
     margin: auto;
     margin-bottom: 50px;
     box-sizing: border-box;
-    padding: 70px;
+    padding: 8%;
     width: 100%;
-    height: 300px;
+    height: 50%;
     text-align: center;
     background-color: var(--black);
 }
@@ -98,10 +98,33 @@
     transform: scaleY(1);
 }
 
+.trip-options{
+    display: block;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100% !important;
+    min-width: 900px;
+    height: 40px;
+    text-align: right;
+    font-size: 25px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.trip-options .destroy{
+    color: #E57373 !important;
+}
+
+.trip-options .destroy:hover{
+    color: #E53935 !important;
+}
+
 .trip-card{
     display: block;
     margin-bottom: 50px;
     width: 100%;
+    min-width: 900px;
     box-sizing: border-box;
     min-height: 200px;
     padding: 20px;
@@ -144,27 +167,6 @@
     font-style: italic;
 }
 
-.trip-options{
-    display: block;
-    margin-bottom: 0;
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100% !important;
-    height: 40px;
-    text-align: right;
-    font-size: 25px;
-    line-height: 35px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.trip-options .destroy{
-    color: #E57373 !important;
-}
-
-.trip-options .destroy:hover{
-    color: #E53935 !important;
-}
-
 .row.path{
     margin: auto;
     padding: 5px;
@@ -185,6 +187,7 @@
     text-align: center;
     color: var(--blue);
     font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
 }
 
 .trip-address{
@@ -193,21 +196,23 @@
     box-sizing: border-box;
     min-height: 80px;
     word-wrap: break-word;
-    font-size: 18px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
     text-align: center;
     opacity: 0.9;
 }
 
 .circle{
     display: inline-block;
-    background-color: var(--blue);
     height: 40px;
+    background-color: var(--white);
+    box-sizing: border-box;
     width: 40px;
     border-radius: 40px;
+    border: solid 12px;
     font-size: 25px;
-    color: var(--white);
+    color: var(--blue);
     text-align: center;
+    z-index: 2;
 }
 
 .circle.left{
@@ -221,9 +226,130 @@
 .line{
     display: block;
     position: relative;
+    box-sizing: border-box;
+    left: 35px;
     top: 17px;
     height: 8px;
     background-color: var(--blue);
-    width: 100%;
+    width: 83%;
     opacity: 0.9;
+}
+
+.line.right{
+    left: -15px;
+}
+
+.row.date{
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--black);
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+/*****POST-SHOW*******/
+
+.show-post{
+    text-align: center
+}
+
+.post-title{
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 6px;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: default;
+}
+
+.posted-by{
+    font-size: 15px;
+    opacity: 0.4;
+    margin-bottom: 50px;
+}
+
+.post-disc{
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    width: 80%;
+    opacity: 0.8;
+    color: var(--black);
+}
+
+.post-map{
+    display: block;
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin-bottom: 50px;
+}
+
+.post-addresses{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    padding-top: 150px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: var(--black);
+    color: var(--blue);
+    text-align: center;
+}
+
+.post-addresses-table{
+    display: block;
+    min-width: 600px;
+    width: 80%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.post-addresses .row.date{
+    color: var(--blue);
+    opacity: 0.8;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.row .address{
+    text-align: left;
+    color: var(--white);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: 0.9;
+    word-wrap: break-word;
+}
+
+.post-addresses-table .row{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.post-addresses-table .column{
+    padding: 0;
+    height: 200px;
+}
+
+.circle.detour{
+    background-color: var(--black);
+}
+
+.line-vertical{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background-color: var(--blue);
+    top: -8px;
+    height: 85%;
+    width: 8px;
 }
