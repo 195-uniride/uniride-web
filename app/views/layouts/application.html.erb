@@ -38,12 +38,12 @@
   
   <% unless user_signed_in?%> 
     <% if notice %>
-  	  <div class="alert-notice"><p class="notice"><%= notice %></p></div>
+  	  <div class="alert-notice"><div class="notice"><%= notice %></div></div>
     <% end %>
   <% end %>
 
   <% if alert %>
-    <div class="alert-error"><p class="alert">
+    <div class="alert-error"><div class="alert">
     <button class="close"> × </button>
     <%= alert %>
     <script>      
@@ -51,7 +51,7 @@
         $(".alert-error").hide();
       });
     </script>
-    </p></div>
+    </div></div>
   <% end %>
 
   <%= yield %>

@@ -101,6 +101,7 @@ select{
 .button, button, .button-primary{
   font-family: 'Josefin Sans', sans-serif;
   border-radius: 1px !important;
+  transition: all 0.5s;
 }
 
 .button-primary{
@@ -110,6 +111,19 @@ select{
 
 .button-primary:hover{
   background-color: #0B7AD5 !important;
+}
+
+.clickable{
+  -webkit-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
+  transition: all 0.5s;
+}
+
+.clickable:hover{
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
 }
 
 /***NavBar*****/

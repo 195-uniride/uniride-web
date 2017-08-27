@@ -2,7 +2,7 @@
 <div class="feed-create-post">
   <p id="notice"><%= notice %></p>
   <%= link_to new_post_path, :action => 'go', :class=>"feed-link-tag" do %>
-    <div class="feed-create-post-icon"><i class="fa fa-car" aria-hidden="true"></i></div>
+    <div class="feed-create-post-icon clickable"><i class="fa fa-car" aria-hidden="true"></i></div>
     <div class="feed-create-post-title">Create a Trip</div>
   <%end%>
 </div>
@@ -16,7 +16,7 @@
         <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"destroy" %> 
         </div>
       <%end%>
-      <%= link_to post, :action => 'go', :class=>"trip-card" do %>
+      <%= link_to post, :action => 'go', :class=>"trip-card clickable" do %>
         <div class="row name">
           <div class="one column"><span class="trip-uploader-photo"></span></div>
           <div class="five columns"><%= first_letter_uppercase post.user.firstName %> <%= first_letter_uppercase post.user.lastName %></div> 

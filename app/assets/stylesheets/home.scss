@@ -48,6 +48,15 @@
 
 .banner .button.special{
 	margin: 50px 15vw;
+	border: none !important;
+	color: var(--white) !important;
+  	transition: all 0.5s;
+  	background-color: var(--blue) !important;
+}
+
+.banner .button.special:hover{
+	border: none;
+	background-color: #0B7AD5 !important
 }
 
 #footer{

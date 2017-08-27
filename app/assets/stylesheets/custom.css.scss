@@ -1,15 +1,18 @@
 /*flash*/
 .alert-error {
-    background-color: #BA3550;
+    background-color: #E57373;
     border: none;
-    position: relative;
-    top: -25px;
-    color: #f7f7f7;
+    position: fixed;
+    z-index: 9;
+    top: 5px;
+    left: 50%;
+    color: var(--black);
     text-align: center;
-    width: 90%;
+    width: 50%;
     margin: auto;
-    border-radius: 3px;
+    padding: 5px;
     box-shadow: 0 1px 5px #000;
+	font-family: 'Open Sans', sans-serif;
  }
 
 .alert-alert {
@@ -27,13 +30,16 @@
  }
 
 .alert-notice {
-    background-color: #212D40;
+    position: absolute;
+    z-index: 8;
+    top: 5px;
+    background-color: var(--black);
     border: none;
-    color: #f7f7f7;
+    color: var(--blue);
     text-align: center;
-    width: 90%;
-    margin: auto;
-    border-radius: 3px;
+    width: 50%;
+    margin-left: 25%;
+    padding: 5px;
     box-shadow: 0 1px 5px #000;
  }
 
